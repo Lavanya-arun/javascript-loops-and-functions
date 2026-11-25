@@ -28,36 +28,30 @@
 // console.log(result(40));
 // console.log(result(120));
 
-// const findmax =(a,b,c) =>
-
-// {
-// if (b>a && b>c)
-// { 
-// return b;
-// }
-// else if (c>a && c>b)
-// {
-//   return c;
-// }
-// else 
-// { return a;
-
-// }
+// const findmax = (a, b, c) => {
+// if (a >= b && a >= c) {
+// return a;
+//  }
+//  else if (b >= a && b >= c) {
+//  return b;
+//  }
+//  else {
+//  return c;
+//  }
 // };
 
 // console.log(findmax(10,25,15));
 // console.log(findmax(5,3,8));
 // console.log(findmax(9,9,2));
 
-// const sumToN = n =>
-// {
-
-// let sum =0;
-// for (i=0;i<=n;i++)
-// sum =sum+i;
-
+// const sumToN = n => {
+// let sum = 0;
+// for (let i = 1; i <= n; i++) {
+// sum += i;
+// }
 // return sum;
 // };
+
 // console.log(sumToN(5));
 // console.log(sumToN(10));
 
@@ -70,18 +64,17 @@
 // };
 // console.log(printable(3));
 
-// const countDigits = (num) => 
-// {
-
+// const countDigits = num => {
+// num = Math.abs(num);
+// if (num === 0) {
+// return 1;
+// }
 // let count = 0;
-
-// while (num > 0)
-//  {
+// while (num > 0) {
 // num = Math.floor(num / 10);
 // count++;
-//  }
+// }
 // return count;
-
 // };
 
 // console.log("Count of digits in 1234:", countDigits(1234));
@@ -106,11 +99,13 @@
 
 // 
 
-// function factorial(n)
-// {
+// function factorial(n) {
+// if (!Number.isInteger(n) || n < 0) {
+// return "Invalid number";
+// }
 // let result = 1;
 // for (let i = 1; i <= n; i++) {
-// result = result * i;
+//  result *= i;
 // }
 // return result;
 // }
